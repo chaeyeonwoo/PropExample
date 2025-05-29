@@ -8,8 +8,28 @@ namespace PropExample
 {
     class Box
     {
-        private int width;
+        public int Width { get; set; }
+        private int Width;
+         
+        public int width
+        {
+            get { return width; }
+            set {
+                if(value < 0)
+                width = value; }
+        }
+
+        
         private int height;
+
+        public int Height
+        {
+            get { return height; }
+            set {
+                if (height > 0) { this.height = height; }
+                else { Console.WriteLine("높이는 자연수로 입력해주세요."); }
+        }
+
 
         public Box(int width, int height)
         {
@@ -37,12 +57,17 @@ namespace PropExample
 
         public void setHeight(int height)
         {
-            if (height > 0) { this.height = height; }
-            else { Console.WriteLine("높이는 자연수로 입력해주세요."); }
+             }
         }
-        public int Area()
+
+        // commit 메시지 : 속성(Property)를 활용하여 게터세터 처리하기
+
+        public int Area
         {
-            return this.width * this.height;
+            get { return Width * Height; }
+          
         }
+        
+       
     }
 }
