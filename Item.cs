@@ -8,5 +8,17 @@ namespace PropExample
 {
     class Item
     {
+        private static int count;
+        public readonly int id=-1;
+        public string name;
+        public int price;
+
+        public Item(string name, int price)
+        {
+            id = count++;
+            this.name = name;
+            this.price = price;
+
+        }
     }
 }
