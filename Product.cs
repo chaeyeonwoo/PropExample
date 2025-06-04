@@ -37,7 +37,10 @@ namespace PropExample
             }
             return product;
         }
-            
-                    
+
+        internal static Product GetInstance(string v1, int v2)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
