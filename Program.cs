@@ -53,7 +53,26 @@ namespace PropExample32
 
             Console.WriteLine(box1.Area);
 
+            // 값 복사
+            int a = 10;
+            int b = a;  // 값 복사
+            b = 20;
+            Console.WriteLine(a); // a와 b가 별개의 변수
 
+
+            Test test = new Test();
+            test.value = 5;
+            change(test);
+            Console.WriteLine(test.value);
+        }
+
+        class Test
+        {
+            public int value = 10;
+        }
+        static void change(Test input)   // 메인 메소드와 같은 위치. 레퍼런스를 매개변수로 받음
+        {
+            input.value = 20;
         }
     }
 }
