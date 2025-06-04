@@ -59,11 +59,18 @@ namespace PropExample32
             b = 20;
             Console.WriteLine(a); // a와 b가 별개의 변수
 
-
+            // 참조 복사
             Test test = new Test();
             test.value = 5;
             change(test);
             Console.WriteLine(test.value);
+
+            //참조 복사 예제 하나 더
+            Test testA = new Test();
+            Test testB = testA;
+            testA.value = 10;
+            testB.value = 20;
+            Console.WriteLine(testA.value);
         }
 
         class Test
